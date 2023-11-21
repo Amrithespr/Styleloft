@@ -1,0 +1,63 @@
+{% extends 'base.html' %}}
+{% load static %}
+{% block metadescription %}
+This is the cart page. Proceed to review your items and place the order
+{% endblock %}
+{% block title %}
+cart-styleloft Company PVT LTD
+{% endblock %}
+{% block content %}
+
+<center>
+<h1 style="color:red;">payment</h1>
+
+<!-- myapp/templates/payment.html -->
+
+<!-- myapp/templates/payment.html -->
+
+<!--<form action="https://api.razorpay.com/v1/payment/order_{{ order_id }}/capture/" method="POST">-->
+<!--  {% csrf_token %}-->
+<!--  <script src="https://checkout.razorpay.com/v1/checkout.js"-->
+<!--          data-key="{{ razorpay_key_id }}"-->
+<!--          data-amount="{{ order_amount }}"-->
+<!--          data-currency="{{ order_currency }}"-->
+<!--          data-order_id="{{ order_id }}"-->
+<!--          data-buttontext="Pay with Razorpay"-->
+<!--          data-name="My Store"-->
+<!--          data-description="Order #{{ order_receipt }}"-->
+<!--          data-image="https://your_logo_url.png"-->
+<!--          data-prefill.name="{{user.username}}"-->
+<!--          data-prefill.email="johndoe@example.com"-->
+<!--          data-theme.color="#F37254"-->
+<!--  ></script>-->
+<!--</form>-->
+
+
+<!-- myapp/templates/payment.html -->
+
+<form action="{% url 'cart:payment' %}" method="POST">
+  {% csrf_token %}
+  <input type="hidden" name="razorpay_order_id" value="{{ order_id }}">
+  <input type="hidden" name="razorpay_payment_id" value="">
+  <input type="hidden" name="razorpay_signature" value="">
+  <script src="https://checkout.razorpay.com/v1/checkout.js"
+          data-key="{{ razorpay_key_id }}"
+          data-amount="{{ order_amount }}"
+          data-currency="{{ order_currency }}"
+          data-order_id="{{ order_id }}"
+          data-buttontext="Pay with Razorpay"
+          data-name="Styleloft Store"
+          data-description="Order #{{ order_receipt }}"
+          data-image="https://your_logo_url.png"
+          data-prefill.name="{{user.username}}"
+          data-prefill.email="{{user.email}}"
+          data-theme.color="#F37254"
+  ></script>
+</form>
+
+
+</center>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+{% endblock %}

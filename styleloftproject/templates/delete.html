@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+{% extends 'base.html' %}
+{% block content %}
+<!--<div style="margin:200px;">-->
+<div class="container">
+    <div class="shadow card">
+        <div class="card-body">
+            <h2 style="color:red;" class="card-title"><b> Delete</b></h2>
+            <form method="POST">
+                {% csrf_token %}
+                <h2>Are you sure to delete this appointment? </h2>
+                <input type="submit" class="btn btn-danger"></input>
+
+                &nbsp <a href="/" class="btn btn-warning">No</a>
+            </form>
+        </div>
+    </div>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br>
+{% endblock %}
+
+
+
+
+
+</body>
+</html>

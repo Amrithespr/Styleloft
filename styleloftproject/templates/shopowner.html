@@ -1,0 +1,455 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>styleloft </title>
+
+        <!-- CSS FILES -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+
+        <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+        <link href="{% static 'css/bootstrap-icons.css' %}" rel="stylesheet">
+
+        <link href="{% static 'css/templatemo-tiya-golf-club.css' %}" rel="stylesheet">
+
+
+    </head>
+
+    <body>
+
+        <main>
+
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <a class="navbar-brand d-flex align-items-center" href="/">
+                        <img src="{% static 'images/logo.png' %}" class="navbar-brand-image img-fluid" alt="Tiya Golf Club">
+                        <span class="navbar-brand-text">
+                            styleloft
+<!--                            Tiya-->
+<!--                            <small>Golf Club</small>-->
+                        </span>
+                    </a>
+
+                    <div class="d-lg-none ms-auto me-3">
+                        <a class="btn custom-btn custom-border-btn" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">Member Login</a>
+                    </div>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-lg-auto">
+                            {% if user.is_authenticated %}
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="#section_1">Home</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="#section_2">About</a>
+                            </li>
+
+
+                                <a class=" click-scroll" href="#section_3"></a>
+
+
+<!--                            <li class="nav-item dropdown">-->
+<!--                                <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pages</a>-->
+
+<!--                                <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">-->
+<!--                                    <li><a class="dropdown-item" href="/shop_listing">Shop Listing</a></li>-->
+
+<!--                                    <li><a class="dropdown-item" href="/shop_detail">Shop Detail</a></li>-->
+<!--                                </ul>-->
+<!--                            </li>-->
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shops</a>
+
+                                <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="/shop_listing_female">Pattambi</a></li>
+
+                                    <li><a class="dropdown-item" href="/shop_listing_male">Palakkad</a></li>
+
+                                    <li><a class="dropdown-item" href="/shop_listing_female">Kozhikkode</a></li>
+
+                                    <li><a class="dropdown-item" href="/shop_listing_male">Thrissur</a></li>
+                                </ul>
+                            </li>
+
+                             <li class="nav-item">
+                                <a class="nav-link click-scroll" href="#section_4">Refer and earn</a>
+                            </li>
+
+                             <li class="nav-item">
+                                <a class="nav-link click-scroll" href="#section_5">Contact Us</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="/shop">Shop</a>
+                            </li>
+
+                        <li class="nav-item">
+                                <a class="nav-link " href="logout/">Logout</a>
+                            </li>
+
+                        <li class="nav-item"> <a class="nav-link ">welcome {{user.username}} </a></li>
+                    </ul>
+                                           {% else %}
+
+                        <li class="nav-item">
+                                <a class="nav-link" href="/">Home</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="/#section_2">About</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="/#section_4">Refer&earn</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="">Membership</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="/shopowner#section_12">Owner Login </a>
+                            </li>
+
+
+
+<!--                            <li class="nav-item">-->
+<!--                                <a class="nav-link click-scroll" href="/shopowner#section_12"></a>-->
+<!--                            </li>-->
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="/shopowner#section_12">Contact Us</a>
+                            </li>
+
+
+                                                {% endif %}
+
+<!--                        <div class="d-none d-lg-block ms-lg-3">-->
+<!--                            <a class="btn custom-btn custom-border-btn" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">Member Login</a>-->
+<!--                        </div>-->
+                    </div>
+                </div>
+            </nav>
+<section class="hero-section hero-50 d-flex justify-content-center align-items-center" id="section_1">
+
+        <div class="section-overlay"></div>
+
+        <svg viewBox="0 0 1962 178" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <path fill="#3D405B" d="M 0 114 C 118.5 114 118.5 167 237 167 L 237 167 L 237 0 L 0 0 Z"
+                  stroke-width="0"></path>
+            <path fill="#3D405B" d="M 236 167 C 373 167 373 128 510 128 L 510 128 L 510 0 L 236 0 Z"
+                  stroke-width="0"></path>
+            <path fill="#3D405B" d="M 509 128 C 607 128 607 153 705 153 L 705 153 L 705 0 L 509 0 Z"
+                  stroke-width="0"></path>
+            <path fill="#3D405B" d="M 704 153 C 812 153 812 113 920 113 L 920 113 L 920 0 L 704 0 Z"
+                  stroke-width="0"></path>
+            <path fill="#3D405B" d="M 919 113 C 1048.5 113 1048.5 148 1178 148 L 1178 148 L 1178 0 L 919 0 Z"
+                  stroke-width="0"></path>
+            <path fill="#3D405B" d="M 1177 148 C 1359.5 148 1359.5 129 1542 129 L 1542 129 L 1542 0 L 1177 0 Z"
+                  stroke-width="0"></path>
+            <path fill="#3D405B" d="M 1541 129 C 1751.5 129 1751.5 138 1962 138 L 1962 138 L 1962 0 L 1541 0 Z"
+                  stroke-width="0"></path>
+        </svg>
+
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-6 col-12">
+
+                    <h1 class="text-white mb-4 pb-2">Shop Owners page</h1>
+
+                    <a href="#section_2" class="btn custom-btn smoothscroll me-3">Learn more</a>
+                </div>
+            </div>
+        </div>
+
+        <svg viewBox="0 0 1962 178" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <path fill="#ffffff" d="M 0 114 C 118.5 114 118.5 167 237 167 L 237 167 L 237 0 L 0 0 Z"
+                  stroke-width="0"></path>
+            <path fill="#ffffff" d="M 236 167 C 373 167 373 128 510 128 L 510 128 L 510 0 L 236 0 Z"
+                  stroke-width="0"></path>
+            <path fill="#ffffff" d="M 509 128 C 607 128 607 153 705 153 L 705 153 L 705 0 L 509 0 Z"
+                  stroke-width="0"></path>
+            <path fill="#ffffff" d="M 704 153 C 812 153 812 113 920 113 L 920 113 L 920 0 L 704 0 Z"
+                  stroke-width="0"></path>
+            <path fill="#ffffff" d="M 919 113 C 1048.5 113 1048.5 148 1178 148 L 1178 148 L 1178 0 L 919 0 Z"
+                  stroke-width="0"></path>
+            <path fill="#ffffff" d="M 1177 148 C 1359.5 148 1359.5 129 1542 129 L 1542 129 L 1542 0 L 1177 0 Z"
+                  stroke-width="0"></path>
+            <path fill="#ffffff" d="M 1541 129 C 1751.5 129 1751.5 138 1962 138 L 1962 138 L 1962 0 L 1541 0 Z"
+                  stroke-width="0"></path>
+        </svg>
+    </section>
+
+            <section class="membership-section section-padding" id="section_3">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-12 col-12 text-center mx-auto mb-lg-5 mb-4">
+                            <h2><span>Membership</span> at Styleloft</h2>
+                        </div>
+
+<!--                        <div class="col-lg-6 col-12 mb-3 mb-lg-0">-->
+                            <div class="col-lg-5 col-12 mx-auto">
+
+                                <p> &nbsp; </p><br><p> </p>
+                            <div class="member-block">
+                                <div class="member-block-image-wrap">
+                                    <img src="{% static 'images/members/successful-asian-lady-boss-red-blazer-holding-clipboard-with-documens-pen-working-looking-happy-white-background.jpg' %}" class="member-block-image img-fluid" alt="">
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-5 col-12 mx-auto">
+                        <h4 class="mb-4 pb-lg-2">Please join us!</h4>
+
+                            <form action="owner_registration/" method="post" class="custom-form membership-form shadow-lg" role="form">
+                                <h4 class="text-white mb-4">Become a member</h4>
+                                <h1 style="color:red; text-align:center;" >   {% for msg in messages %} {{msg}}  {% endfor %}    </h1>
+                                            {% csrf_token %}
+                                    <div class="form-floating">
+                                        <input type="text" name="username" id="full-name" class="form-control" placeholder="Username" required="">
+
+                                        <label for="floatingInput">Username</label>
+                                    </div>
+
+                                    <div class="form-floating">
+                                        <input type="text" name="shop_name" id="full-name" class="form-control" placeholder="Shop name" required="">
+
+                                        <label for="floatingInput">Shop name</label>
+                                    </div>
+
+                                    <div class="form-floating">
+                                        <input type="password" name="password" id="full-name" class="form-control" placeholder="Password" required="">
+
+                                        <label for="floatingInput">Password</label>
+                                    </div>
+
+                                    <div class="form-floating">
+                                        <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="Email address" required="">
+
+                                        <label for="floatingInput">Email address</label>
+                                    </div>
+
+                                    <div class="form-floating">
+                                        <input type="text" name="referal" id="full-name" class="form-control" placeholder="Refered by" >
+
+                                        <label for="floatingInput">Refered by</label>
+                                    </div>
+
+
+
+                                    <button type="submit" class="form-control">Submit</button><br>
+                                    <center> <a href="/login"> Forgot password? </a> &nbsp|&nbsp <a href="#section_3"> create account </a> </center>
+
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+
+
+            <section class="section-bg-image"  id="section_12">
+                <svg viewBox="0 0 1265 144" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path fill="rgba(255, 255, 255, 1)" d="M 0 40 C 164 40 164 20 328 20 L 328 20 L 328 0 L 0 0 Z" stroke-width="0"></path> <path fill="rgba(255, 255, 255, 1)" d="M 327 20 C 445.5 20 445.5 89 564 89 L 564 89 L 564 0 L 327 0 Z" stroke-width="0"></path> <path fill="rgba(255, 255, 255, 1)" d="M 563 89 C 724.5 89 724.5 48 886 48 L 886 48 L 886 0 L 563 0 Z" stroke-width="0"></path><path fill="rgba(255, 255, 255, 1)" d="M 885 48 C 1006.5 48 1006.5 67 1128 67 L 1128 67 L 1128 0 L 885 0 Z" stroke-width="0"></path><path fill="rgba(255, 255, 255, 1)" d="M 1127 67 C 1196 67 1196 0 1265 0 L 1265 0 L 1265 0 L 1127 0 Z" stroke-width="0"></path></svg>
+
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-6 col-12">
+                            <div class="section-bg-image-block">
+                               <center> <h2 class="mb-lg-3">LOGIN</h2>  </center>
+
+<!--                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor ut labore et dolore.</p>-->
+                                    <h1 style="color:red;">   {% for msg in messages %} {{msg}}  {% endfor %}    </h1>
+
+
+                                <form action="owner_login/" method="post" class="custom-form mt-lg-4 mt-2" role="form">
+                                            {% csrf_token %}
+                                    <div class="form-floating">
+                                        <input type="text" name="username" id="full-name" class="form-control" placeholder="Shop name" required="">
+
+                                        <label for="floatingInput">Shopname</label>
+                                    </div>
+
+                                     <div class="form-floating">
+                                        <input type="password" name="password" id="Password" class="form-control" placeholder="Password" required="">
+
+                                        <label for="floatingInput">Password</label>
+                                    </div>
+
+
+
+                                  <center>  <button type="submit" class="form-control">Submit</button> </center>
+                                    <br>
+                                    <center> <a href="{% url 'shopowner:reset_owner_password' %}"> Forgot password? </a> &nbsp|&nbsp <a href="#section_3"> create account </a> </center>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,224L34.3,192C68.6,160,137,96,206,90.7C274.3,85,343,139,411,144C480,149,549,107,617,122.7C685.7,139,754,213,823,240C891.4,267,960,245,1029,224C1097.1,203,1166,181,1234,160C1302.9,139,1371,117,1406,106.7L1440,96L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path></svg>
+
+            </section>
+
+
+            <section class="contact-section section-padding" id="section_5">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-5 col-12">
+                            <form action="#" method="post" class="custom-form contact-form" role="form">
+                                <h2 class="mb-4 pb-2">Contact Styleloft</h2>
+
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <div class="form-floating">
+                                            <input type="text" name="full-name" id="full-name" class="form-control" placeholder="Full Name" required="">
+
+                                            <label for="floatingInput">Full Name</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <div class="form-floating">
+                                            <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="Email address" required="">
+
+                                            <label for="floatingInput">Email address</label>
+                                        </div>
+                                    </div>
+
+<!--                                    <div class="col-lg-12 col-12">-->
+<!--                                        <div class="form-floating">-->
+<!--                                            <textarea class="form-control" id="message" name="message" placeholder="Describe message here"></textarea>-->
+<!--                                            -->
+<!--                                            <label for="floatingTextarea">Message</label>-->
+<!--                                        </div>-->
+
+<!--                                        <button type="submit" class="form-control">Submit Form</button>-->
+<!--                                    </div>-->
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="col-lg-6 col-12">
+                            <div class="contact-info mt-5">
+                                <div class="contact-info-item">
+                                    <div class="contact-info-body">
+                                        <strong>London, United Kingdom</strong>
+
+                                        <p class="mt-2 mb-1">
+                                            <a href="tel: 010-020-0340" class="contact-link">
+                                                (020)
+                                                010-020-0340
+                                            </a>
+                                        </p>
+
+                                        <p class="mb-0">
+                                            <a href="mailto:info@company.com" class="contact-link">
+                                                info@company.com
+                                            </a>
+                                        </p>
+                                    </div>
+
+                                    <div class="contact-info-footer">
+                                        <a href="#">Directions</a>
+                                    </div>
+                                </div>
+
+                                <img src="{% static 'images/WorldMap.svg' %}" class="img-fluid" alt="">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-6 col-12 me-auto mb-5 mb-lg-0">
+                        <a class="navbar-brand d-flex align-items-center" href="index.html">
+                            <img src="{% static 'images/logo.png' %}" class="navbar-brand-image img-fluid" alt="">
+                            <span class="navbar-brand-text">
+<!--                                Tiya-->
+<!--                                <small>Golf Club</small>-->styleloft
+                            </span>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-3 col-12">
+                        <h5 class="site-footer-title mb-4">Join Us</h5>
+
+                        <p class="d-flex border-bottom pb-3 mb-3 me-lg-3">
+                            <span>Mon-Fri</span>
+                            6:00 AM - 6:00 PM
+                        </p>
+
+                        <p class="d-flex me-lg-3">
+                            <span>Sat-Sun</span>
+                            6:30 AM - 8:30 PM
+                        </p>
+                        <br>
+<!--                        <p class="copyright-text">Copyright © 2048 Tiya Golf Club</p>-->
+                         <p class="copyright-text">Copyright © styleloft</p>
+                    </div>
+
+                        <div class="col-lg-2 col-12 ms-auto">
+                            <ul class="social-icon mt-lg-5 mt-3 mb-4">
+                                <li class="social-icon-item">
+                                    <a href="#" class="social-icon-link bi-instagram"></a>
+                                </li>
+
+                                <li class="social-icon-item">
+                                    <a href="#" class="social-icon-link bi-twitter"></a>
+                                </li>
+
+                                <li class="social-icon-item">
+                                    <a href="#" class="social-icon-link bi-whatsapp"></a>
+                                </li>
+                            </ul>
+<!--                            <p class="copyright-text">Design: <a rel="nofollow" href=" target="_blank >E-Tech</a></p>-->
+
+                        </div>
+
+                </div>
+            </div>
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#81B29A" fill-opacity="1" d="M0,224L34.3,192C68.6,160,137,96,206,90.7C274.3,85,343,139,411,144C480,149,549,107,617,122.7C685.7,139,754,213,823,240C891.4,267,960,245,1029,224C1097.1,203,1166,181,1234,160C1302.9,139,1371,117,1406,106.7L1440,96L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path></svg>
+        </footer>
+
+
+        <!-- JAVASCRIPT FILES -->
+        <script src="{% static 'js/jquery.min.js' %}"></script>
+        <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+        <script src="{% static 'js/jquery.sticky.js' %}"></script>
+        <script src="{% static 'js/click-scroll.js' %}"></script>
+        <script src="{% static 'js/animated-headline.js' %}"></script>
+        <script src="{% static 'js/modernizr.js' %}"></script>
+        <script src="{% static 'js/custom.js' %}"></script>
+
+    </body>
+</html>

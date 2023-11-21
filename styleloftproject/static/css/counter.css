@@ -1,0 +1,19 @@
+.counter {
+    display: inline-block;
+    margin-right: 2px;
+    padding-left:4px;
+    font-size: 58px;
+    font-weight: bold;
+    color: #f2cc8f;
+    animation: count 1s ease-in-out;
+}
+
+.counter span {
+    display: block; /* Add this line to make the counter value on a new line */
+}
+
+.counter-name {
+    font-size: 26px;
+    margin-top: 12px; /* Add a margin to separate the counter name from the value */
+    text-align:center;
+}
