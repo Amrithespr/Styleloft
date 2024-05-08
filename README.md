@@ -4,4 +4,5 @@ its address or location and its website if present. It contains the services the
 availability. Already booked timeslots will be shown on the page itself. The shop owner has to register in the web application to make their shop available on the web application.They have to give 
 the details of their shop, its services, and the time of availability. Admin maintains the web application by monitoring the details provided in the web application and do the basic crud operations.
 
+Pleae ensure to change the database according to your preference from django settings and add categories and product details from admin page.
 
